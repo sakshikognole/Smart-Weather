@@ -15,14 +15,14 @@ function getWeather() {
 }
 
 async function fetchWeather(city) {
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=4&aqi=no`;
+  const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=4&aqi=no`;
   const res = await fetch(url);
   const data = await res.json();
   displayWeather(data);
 }
 
 async function fetchWeatherByCoords(lat, lon) {
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${lon}&days=4&aqi=no`;
+  const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${lon}&days=4&aqi=no`;
   const res = await fetch(url);
   const data = await res.json();
   displayWeather(data);
